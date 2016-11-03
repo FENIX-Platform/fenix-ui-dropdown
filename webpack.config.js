@@ -30,7 +30,22 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
-            {test: /bootstrap.+\.(jsx|js)$/, loader: 'imports?jQuery=jquery,$=jquery'}]
+
+            {test: /\.json/, loader: "json-loader"},
+            {test: /\.png$/, loader: "url-loader?limit=100000"},
+            {test: /\.jpg$/, loader: "file-loader?name=[name].[ext]&limit=100000"},
+            {test: /\.svg/, loader: "file-loader?name=[name].[ext]&limit=100000"},
+            {test: /\.gif/, loader: "file-loader?name=[name].[ext]&limit=100000"},
+
+            //Bootstrap loader
+            {test: /bootstrap\/js\//, loader: 'imports?jQuery=jquery'},
+            {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&minetype=application/font-woff"},
+            {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&minetype=application/font-woff"},
+            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: "url?limit=10000&minetype=application/octet-stream"},
+            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"}
+
+
+        ]
     },
 
     plugins: clearArray([

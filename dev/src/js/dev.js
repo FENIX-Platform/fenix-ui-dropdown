@@ -20,6 +20,10 @@ define([
 
         log.setLevel('trace');
 
+
+        //Bootstrap
+        require('bootstrap/dist/css/bootstrap.css');
+
         this.start();
     }
 
