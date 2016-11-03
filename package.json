@@ -1,6 +1,6 @@
 {
   "name": "fenix-ui-dropdown",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "FENIX dropdown",
   "main": "dist/fenix-ui-dropdown.min.js",
   "directories": {
