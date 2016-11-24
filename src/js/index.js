@@ -1,7 +1,6 @@
 /*global define, require*/
 define([
-    'jquery',
-    'bootstrap'
+    'jquery'
 ], function ($) {
 
     'use strict';

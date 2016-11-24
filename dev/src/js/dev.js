@@ -18,6 +18,8 @@ define([
 
         console.clear();
 
+        this._importThirdPartyCss();
+
         log.setLevel('trace');
 
 
@@ -60,6 +62,14 @@ define([
         instances.push(instance);
 
         return instance;
+    };
+
+
+    Dev.prototype._importThirdPartyCss = function () {
+
+        //Bootstrap
+        require("bootstrap-loader");
+
     };
 
     return new Dev();

@@ -49,6 +49,7 @@ module.exports = {
     },
 
     plugins: clearArray([
+        new webpack.ProvidePlugin({$: "jquery", jQuery: "jquery"}),
         isProduction(new webpack.optimize.UglifyJsPlugin({
             compress: {warnings: false},
             output: {comments: false}
